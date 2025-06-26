@@ -45,8 +45,22 @@ class BinaryTree
         newNode->leftchild = nullptr;
         newNode->rightchild = nullptr;
 
-        //locate the node which will be tje parent of the node to be inserted
+        //step 4 :locate the node which will be tje parent of the node to be inserted
         Node *parent = nullptr;
+        Node *currentNode = nullptr;
+        search(x, parent, currentNode);
+
+        //step 5: If parent is null (tree is empty)
+        if (parent == nullptr)
+        {
+            //5a: Mark the new node as ROOT
+            ROOT = newNode;
+
+            //5b:exit
+            return;
+        }
+       
 
     }
+
 };
