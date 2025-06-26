@@ -45,7 +45,7 @@ class BinaryTree
         newNode->leftchild = nullptr;
         newNode->rightchild = nullptr;
 
-        //step 4 :locate the node which will be tje parent of the node to be inserted
+        //step 4 :locate the node which will be the parent of the node to be inserted
         Node *parent = nullptr;
         Node *currentNode = nullptr;
         search(x, parent, currentNode);
@@ -78,5 +78,21 @@ class BinaryTree
             //7b : exit
             return;
        }
+    }
+
+    void search (int element, Node *&parent, Node *&currentNode)
+    {
+        //this function searches the currentnode of the specified node as well ass the current node of its parrent
+        currentNode = ROOT;
+        parent = nullptr;
+        while((currentNode != nullptr) && (currentNode->info != element))
+        {
+            parent = currentNode;
+            if(
+                element < currentNode->info)
+              currentNode = currentNode ->leftchild;
+              else
+              currentNode = currentNode->rightchild;
+        }
     }
 };
