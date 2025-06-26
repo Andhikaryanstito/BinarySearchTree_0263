@@ -8,5 +8,13 @@ class Node
     Node *leftchild;
     Node *rightchild;
     
-}
 
+//constructor  for the node class
+Node()
+{
+    {
+    leftchild = nullptr; //Initialize left child to null
+    rightchild = nullptr; //Initialize right child to null
+    }
+}
+};
